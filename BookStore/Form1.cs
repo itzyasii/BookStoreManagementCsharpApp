@@ -7,7 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+using System.Windows.Forms;E:\Visual Studio Workspace C#\BookStore\Form1.cs
 
 namespace BookStore
 {
@@ -107,6 +107,11 @@ namespace BookStore
                     cmd.ExecuteNonQuery();
                 }
             }
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

@@ -66,12 +66,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BookStoreDataDataSet3.xsd</DependentUpon>
     </Compile>
-    <Compile Include="DisplayingData.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DisplayingData.Designer.cs">
-      <DependentUpon>DisplayingData.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,9 +74,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="DisplayingData.resx">
-      <DependentUpon>DisplayingData.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

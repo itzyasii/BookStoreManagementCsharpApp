@@ -43,22 +43,22 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.bookStoreDataDataSet3 = new BookStore.BookStoreDataDataSet3();
-            this.booksBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.booksTableAdapter = new BookStore.BookStoreDataDataSet3TableAdapters.BooksTableAdapter();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.bookIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.titleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.authorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.genreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button4 = new System.Windows.Forms.Button();
+            this.booksBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bookStoreDataDataSet3 = new BookStore.BookStoreDataDataSet3();
+            this.label7 = new System.Windows.Forms.Label();
+            this.booksTableAdapter = new BookStore.BookStoreDataDataSet3TableAdapters.BooksTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bookStoreDataDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.booksBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookStoreDataDataSet3)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -195,36 +195,18 @@
             this.panel1.Size = new System.Drawing.Size(1092, 649);
             this.panel1.TabIndex = 9;
             // 
-            // label7
+            // button4
             // 
-            this.label7.AutoSize = true;
-            this.label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label7.Font = new System.Drawing.Font("Stencil", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(236, 29);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(706, 61);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "BOOK STORE DATA VIEWING";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.bookIDDataGridViewTextBoxColumn,
-            this.titleDataGridViewTextBoxColumn,
-            this.authorDataGridViewTextBoxColumn,
-            this.genreDataGridViewTextBoxColumn,
-            this.quantityDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.booksBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(24, 109);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1033, 426);
-            this.dataGridView1.TabIndex = 8;
+            this.button4.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.button4.Font = new System.Drawing.Font("Palatino Linotype", 13.8F);
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(600, 583);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(214, 39);
+            this.button4.TabIndex = 10;
+            this.button4.Text = "DELETE DATA";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -239,19 +221,27 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // bookStoreDataDataSet3
+            // dataGridView1
             // 
-            this.bookStoreDataDataSet3.DataSetName = "BookStoreDataDataSet3";
-            this.bookStoreDataDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // booksBindingSource
-            // 
-            this.booksBindingSource.DataMember = "Books";
-            this.booksBindingSource.DataSource = this.bookStoreDataDataSet3;
-            // 
-            // booksTableAdapter
-            // 
-            this.booksTableAdapter.ClearBeforeFill = true;
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.DarkSlateGray;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.bookIDDataGridViewTextBoxColumn,
+            this.titleDataGridViewTextBoxColumn,
+            this.authorDataGridViewTextBoxColumn,
+            this.genreDataGridViewTextBoxColumn,
+            this.quantityDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.booksBindingSource;
+            this.dataGridView1.GridColor = System.Drawing.Color.White;
+            this.dataGridView1.Location = new System.Drawing.Point(24, 109);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(1033, 426);
+            this.dataGridView1.TabIndex = 8;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // bookIDDataGridViewTextBoxColumn
             // 
@@ -303,18 +293,31 @@
             this.quantityDataGridViewTextBoxColumn.ReadOnly = true;
             this.quantityDataGridViewTextBoxColumn.Width = 170;
             // 
-            // button4
+            // booksBindingSource
             // 
-            this.button4.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.button4.Font = new System.Drawing.Font("Palatino Linotype", 13.8F);
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(600, 583);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(214, 39);
-            this.button4.TabIndex = 10;
-            this.button4.Text = "DELETE DATA";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.booksBindingSource.DataMember = "Books";
+            this.booksBindingSource.DataSource = this.bookStoreDataDataSet3;
+            // 
+            // bookStoreDataDataSet3
+            // 
+            this.bookStoreDataDataSet3.DataSetName = "BookStoreDataDataSet3";
+            this.bookStoreDataDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label7.Font = new System.Drawing.Font("Stencil", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(236, 29);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(706, 61);
+            this.label7.TabIndex = 7;
+            this.label7.Text = "BOOK STORE DATA VIEWING";
+            // 
+            // booksTableAdapter
+            // 
+            this.booksTableAdapter.ClearBeforeFill = true;
             // 
             // Admin
             // 
@@ -342,8 +345,8 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bookStoreDataDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.booksBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookStoreDataDataSet3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

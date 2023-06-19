@@ -7,7 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;E:\Visual Studio Workspace C#\BookStore\Form1.cs
+using System.Windows.Forms;
 
 namespace BookStore
 {
@@ -24,6 +24,7 @@ namespace BookStore
             this.booksTableAdapter.Fill(this.bookStoreDataDataSet3.Books);
 
             panel1.Visible = false;
+            
 
 
 
@@ -92,6 +93,10 @@ namespace BookStore
 
                 DeleteRowFromDatabase(selectedRow);
                 selectedRow.Delete();
+            }
+            else
+            {
+                MessageBox.Show("Select row to delete!", "Deletion", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void DeleteRowFromDatabase(DataRow row)
